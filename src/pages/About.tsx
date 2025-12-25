@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Award, Tv, Users, Building2, TrendingUp } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/pic-image.png";
 
 const education = [
   "MSc Psychology – Andhra University, Visakhapatnam",
