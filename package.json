@@ -1,7 +1,7 @@
 {
   "homepage": "https://somesettymanideep.github.io/happiness-engineer-hub/",
-  "name": "vite_react_shadcn_ts",
-  "private": true,
+  "name": "happiness-engineer-hub",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
