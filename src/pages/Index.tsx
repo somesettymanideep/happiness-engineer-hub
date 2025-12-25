@@ -6,7 +6,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { HighlightCard } from "@/components/shared/HighlightCard";
 import heroImage from "@/assets/hero-aviation.jpg";
-import profilePhoto from "@/assets/pic-image.png";
+import profilePhoto from "@/assets/profile-photo.jpg";
 import bookCover from "@/assets/book-cover.jpg";
 
 const highlights = [
