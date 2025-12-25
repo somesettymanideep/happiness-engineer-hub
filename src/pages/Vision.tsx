@@ -2,32 +2,19 @@ import { motion } from "framer-motion";
 import { Target, Compass, Heart, Users, Globe } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { PageHero } from "@/components/shared/PageHero";
+import heroVision from "@/assets/hero-vision.jpg";
 
 const Vision = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-              Purpose
-            </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-              Vision & Mission
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              A life dedicated to sharing wisdom and guiding others towards
-              fulfillment.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        title="Vision & Mission"
+        subtitle="A life dedicated to sharing wisdom and guiding others towards fulfillment."
+        label="Purpose"
+        backgroundImage={heroVision}
+        breadcrumbs={[{ label: "Vision & Mission" }]}
+      />
 
       {/* Vision Section */}
       <section className="py-20 bg-primary">

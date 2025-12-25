@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { GraduationCap, Award, Tv, Users, Building2, TrendingUp } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { PageHero } from "@/components/shared/PageHero";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const education = [
   "MSc Psychology – Andhra University, Visakhapatnam",
@@ -30,21 +32,24 @@ const associations = [
 const About = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-secondary to-background">
+      <PageHero
+        title="My Journey"
+        subtitle="From Aircraft Engineer to Life Engineer – a story of passion, learning, and transformation."
+        label="About Me"
+        backgroundImage={heroAbout}
+        breadcrumbs={[{ label: "About" }]}
+      />
+
+      {/* Journey Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-                About Me
-              </span>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-                My Journey
-              </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 I began my professional journey as an Aircraft Maintenance Engineer
                 at the age of 22. I worked with SpiceJet Airlines for 20 long years,
@@ -66,7 +71,8 @@ const About = () => {
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >

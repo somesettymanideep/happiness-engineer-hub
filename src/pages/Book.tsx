@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { BookOpen, Heart, Wallet, Users, Lightbulb, Sparkles, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { PageHero } from "@/components/shared/PageHero";
 import { Button } from "@/components/ui/button";
 import bookCover from "@/assets/book-cover.jpg";
+import heroBook from "@/assets/hero-book.jpg";
 
 const pillars = [
   {
@@ -42,15 +44,24 @@ const pillars = [
 const Book = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-secondary to-background">
+      <PageHero
+        title="Decoding Happiness"
+        subtitle="A practical guide to understanding why happiness is lost and how balance can be restored."
+        label="Featured Book"
+        backgroundImage={heroBook}
+        breadcrumbs={[{ label: "Book" }]}
+      />
+
+      {/* Book Details Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex justify-center order-2 lg:order-1"
+              className="flex justify-center"
             >
               <div className="relative">
                 <div className="absolute -inset-8 bg-accent/20 rounded-3xl blur-2xl" />
@@ -64,16 +75,13 @@ const Book = () => {
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="order-1 lg:order-2"
             >
-              <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-                Featured Book
-              </span>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-                Decoding Happiness
-              </h1>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+                About the Book
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 A practical guide to understanding why happiness is lost and how
                 balance can be restored across health, wealth, relationships,

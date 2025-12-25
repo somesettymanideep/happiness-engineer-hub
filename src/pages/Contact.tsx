@@ -2,11 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Youtube, Linkedin, Instagram } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { SectionHeader } from "@/components/shared/SectionHeader";
+import { PageHero } from "@/components/shared/PageHero";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const contactInfo = [
   {
@@ -72,28 +73,13 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-              Get in Touch
-            </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-              Contact Me
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Have a question, want to collaborate, or need guidance? I'd love to
-              hear from you. Reach out and let's start a conversation.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Me"
+        subtitle="Have a question, want to collaborate, or need guidance? I'd love to hear from you. Reach out and let's start a conversation."
+        label="Get in Touch"
+        backgroundImage={heroContact}
+        breadcrumbs={[{ label: "Contact" }]}
+      />
 
       {/* Contact Section */}
       <section className="py-20 bg-background">
