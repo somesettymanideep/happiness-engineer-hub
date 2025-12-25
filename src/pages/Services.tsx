@@ -10,8 +10,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { SectionHeader } from "@/components/shared/SectionHeader";
+import { PageHero } from "@/components/shared/PageHero";
 import { Button } from "@/components/ui/button";
+import heroServices from "@/assets/hero-services.jpg";
 
 const services = [
   {
@@ -79,29 +80,13 @@ const services = [
 const Services = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-              Services
-            </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-              What I Offer
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Drawing from 20+ years of experience across aviation, psychology,
-              finance, and personal development, I offer transformative services
-              to help you achieve balance and fulfillment.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        title="What I Offer"
+        subtitle="Drawing from 20+ years of experience across aviation, psychology, finance, and personal development, I offer transformative services to help you achieve balance and fulfillment."
+        label="Services"
+        backgroundImage={heroServices}
+        breadcrumbs={[{ label: "Services" }]}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">
