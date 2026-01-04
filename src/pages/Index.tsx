@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { HighlightCard } from "@/components/shared/HighlightCard";
+import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
+import { VideoTestimonialsCarousel } from "@/components/testimonials/VideoTestimonialsCarousel";
 import heroImage from "@/assets/hero-aviation.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import bookCover from "@/assets/book-cover.jpg";
@@ -234,6 +236,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Video Testimonials Section */}
+      <VideoTestimonialsCarousel />
 
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-background">
