@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+     "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+     "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
