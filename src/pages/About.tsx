@@ -3,7 +3,7 @@ import { GraduationCap, Award, Tv, Users, Building2, TrendingUp } from "lucide-r
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { PageHero } from "@/components/shared/PageHero";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo.png";
 import heroAbout from "@/assets/hero-about.jpg";
 
 const education = [
