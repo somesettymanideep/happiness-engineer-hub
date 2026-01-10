@@ -68,7 +68,7 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="inline-block px-4 py-2 bg-gold/20 rounded-full text-gold text-sm font-medium mb-6">
-                Life Engineer | Aircraft Engineer | Author | Mentor
+                Life Engineer | Aircraft Engineer | Author | Mentor | Psycholigist
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground leading-tight mb-6">
                 Balance is the{" "}

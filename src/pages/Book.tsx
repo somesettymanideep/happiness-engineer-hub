@@ -93,7 +93,7 @@ const Book = () => {
                 into actionable wisdom for achieving a balanced, fulfilled life.
               </p>
               <Button variant="gold" size="lg" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href=" https://amzn.in/d/6Rk5EQT" target="_blank" rel="noopener noreferrer">
                   Get Your Copy
                   <ArrowRight className="w-5 h-5" />
                 </a>

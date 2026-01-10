@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Youtube, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Youtube, Facebook,Twitter, Linkedin, Instagram } from "lucide-react";
 
 const footerLinks = [
   { name: "Home", path: "/" },
@@ -15,6 +15,8 @@ const socialLinks = [
   { icon: Youtube, href: "#", label: "YouTube" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Instagram, href: "#", label: "Instagram" },
+   { icon: Facebook, href: "#", label: "facebook" },
+  { icon: Twitter, href: "#", label: "Twitter" },
 ];
 
 export const Footer = () => {

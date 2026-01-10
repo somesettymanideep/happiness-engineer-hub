@@ -66,14 +66,14 @@ export const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             </button>
           </div>
 
-          <nav className="flex-1 p-4 space-y-1">
+          <nav className="flex-1 p-4 space-y-1 bg-white">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 onClick={() => setSidebarOpen(false)}
                 className={cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-lg transition-colors",
+                  "flex bg-white items-center gap-3 px-4 py-3 rounded-lg transition-colors",
                   location.pathname === item.href
                     ? "bg-accent text-accent-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"
