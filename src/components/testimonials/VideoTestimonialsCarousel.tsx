@@ -8,23 +8,41 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-// Helper to extract video ID and create embed URL
-const getEmbedUrl = (url: string): string => {
-  // YouTube
-  const youtubeMatch = url.match(
+// Helper to extract video ID
+const getYouTubeVideoId = (url: string): string | null => {
+  const match = url.match(
     /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]+)/
   );
-  if (youtubeMatch) {
-    return `https://www.youtube.com/embed/${youtubeMatch[1]}`;
+  return match ? match[1] : null;
+};
+
+const getVimeoVideoId = (url: string): string | null => {
+  const match = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)/);
+  return match ? match[1] : null;
+};
+
+// Helper to create embed URL
+const getEmbedUrl = (url: string): string => {
+  const youtubeId = getYouTubeVideoId(url);
+  if (youtubeId) {
+    return `https://www.youtube.com/embed/${youtubeId}`;
   }
 
-  // Vimeo
-  const vimeoMatch = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)/);
-  if (vimeoMatch) {
-    return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+  const vimeoId = getVimeoVideoId(url);
+  if (vimeoId) {
+    return `https://player.vimeo.com/video/${vimeoId}`;
   }
 
   return url;
+};
+
+// Helper to get YouTube thumbnail
+const getYouTubeThumbnail = (url: string): string | null => {
+  const videoId = getYouTubeVideoId(url);
+  if (videoId) {
+    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  }
+  return null;
 };
 
 export const VideoTestimonialsCarousel = () => {
@@ -81,9 +99,19 @@ export const VideoTestimonialsCarousel = () => {
                       ) : (
                         <button
                           onClick={() => setActiveVideo(testimonial.id)}
-                          className="absolute inset-0 w-full h-full flex items-center justify-center bg-primary/80 hover:bg-primary/70 transition-colors group"
+                          className="absolute inset-0 w-full h-full flex items-center justify-center group"
                         >
-                          <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+                          {getYouTubeThumbnail(testimonial.videoUrl) ? (
+                            <img
+                              src={getYouTubeThumbnail(testimonial.videoUrl)!}
+                              alt={`${testimonial.name} video thumbnail`}
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="absolute inset-0 w-full h-full bg-primary/80" />
+                          )}
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+                          <div className="relative w-16 h-16 rounded-full bg-gold flex items-center justify-center group-hover:scale-110 transition-transform">
                             <Play className="w-6 h-6 text-primary fill-current ml-1" />
                           </div>
                         </button>

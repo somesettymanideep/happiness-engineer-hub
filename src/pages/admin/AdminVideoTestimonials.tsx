@@ -24,7 +24,6 @@ const emptyTestimonial: Omit<VideoTestimonial, "id" | "createdAt"> = {
   name: "",
   designation: "",
   videoUrl: "",
-  thumbnailUrl: "",
   order: 1,
   status: "active",
 };
@@ -67,7 +66,6 @@ const AdminVideoTestimonials = () => {
       name: testimonial.name,
       designation: testimonial.designation || "",
       videoUrl: testimonial.videoUrl,
-      thumbnailUrl: testimonial.thumbnailUrl || "",
       order: testimonial.order,
       status: testimonial.status,
     });
@@ -140,14 +138,6 @@ const AdminVideoTestimonials = () => {
                   <p className="text-xs text-muted-foreground mt-1">
                     Supports YouTube and Vimeo URLs
                   </p>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Thumbnail URL</label>
-                  <Input
-                    value={formData.thumbnailUrl}
-                    onChange={(e) => setFormData((p) => ({ ...p, thumbnailUrl: e.target.value }))}
-                    placeholder="https://..."
-                  />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
