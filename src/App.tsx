@@ -9,12 +9,14 @@ import Services from "./pages/Services";
 import Vision from "./pages/Vision";
 import Book from "./pages/Book";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminVideoTestimonials from "./pages/admin/AdminVideoTestimonials";
 import AdminMessages from "./pages/admin/AdminMessages";
+import AdminGallery from "./pages/admin/AdminGallery";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,7 @@ const App = () => (
           <Route path="/vision" element={<Vision />} />
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />
@@ -38,6 +41,7 @@ const App = () => (
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />
           <Route path="/admin/video-testimonials" element={<AdminVideoTestimonials />} />
           <Route path="/admin/messages" element={<AdminMessages />} />
+          <Route path="/admin/gallery" element={<AdminGallery />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

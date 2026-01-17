@@ -9,7 +9,8 @@ import {
   LogOut, 
   Home,
   Menu,
-  X
+  X,
+  Image
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -19,6 +20,7 @@ const navItems = [
   { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
   { label: "Text Testimonials", href: "/admin/testimonials", icon: MessageSquare },
   { label: "Video Testimonials", href: "/admin/video-testimonials", icon: Video },
+  { label: "Gallery", href: "/admin/gallery", icon: Image },
   { label: "Contact Messages", href: "/admin/messages", icon: Mail },
 ];
 

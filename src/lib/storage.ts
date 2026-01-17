@@ -1,9 +1,10 @@
-import { TextTestimonial, VideoTestimonial, ContactSubmission } from "@/types/testimonials";
+import { TextTestimonial, VideoTestimonial, ContactSubmission, GalleryPhoto } from "@/types/testimonials";
 
 const STORAGE_KEYS = {
   textTestimonials: "lifeengineer_text_testimonials",
   videoTestimonials: "lifeengineer_video_testimonials",
   contactSubmissions: "lifeengineer_contact_submissions",
+  galleryPhotos: "lifeengineer_gallery_photos",
   adminAuth: "lifeengineer_admin_auth",
 };
 
@@ -77,6 +78,39 @@ const defaultVideoTestimonials: VideoTestimonial[] = [
   },
 ];
 
+const defaultGalleryPhotos: GalleryPhoto[] = [
+  {
+    id: "1",
+    title: "Aircraft Maintenance",
+    description: "Boeing 737-800 inspection at the tarmac",
+    imageUrl: "/placeholder.svg",
+    category: "Aviation",
+    order: 1,
+    status: "active",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: "2",
+    title: "Training Session",
+    description: "Instructor training at GMR Aviation Academy",
+    imageUrl: "/placeholder.svg",
+    category: "Training",
+    order: 2,
+    status: "active",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: "3",
+    title: "Book Launch Event",
+    description: "Decoding Happiness book launch ceremony",
+    imageUrl: "/placeholder.svg",
+    category: "Events",
+    order: 3,
+    status: "active",
+    createdAt: new Date().toISOString(),
+  },
+];
+
 // Initialize with default data if empty
 function initializeStorage() {
   if (!localStorage.getItem(STORAGE_KEYS.textTestimonials)) {
@@ -87,6 +121,9 @@ function initializeStorage() {
   }
   if (!localStorage.getItem(STORAGE_KEYS.contactSubmissions)) {
     localStorage.setItem(STORAGE_KEYS.contactSubmissions, JSON.stringify([]));
+  }
+  if (!localStorage.getItem(STORAGE_KEYS.galleryPhotos)) {
+    localStorage.setItem(STORAGE_KEYS.galleryPhotos, JSON.stringify(defaultGalleryPhotos));
   }
 }
 
@@ -156,6 +193,29 @@ export function updateContactSubmission(submission: ContactSubmission): void {
     submissions[index] = submission;
     localStorage.setItem(STORAGE_KEYS.contactSubmissions, JSON.stringify(submissions));
   }
+}
+
+// Gallery Photos
+export function getGalleryPhotos(): GalleryPhoto[] {
+  initializeStorage();
+  const data = localStorage.getItem(STORAGE_KEYS.galleryPhotos);
+  return data ? JSON.parse(data) : [];
+}
+
+export function saveGalleryPhoto(photo: GalleryPhoto): void {
+  const photos = getGalleryPhotos();
+  const index = photos.findIndex((p) => p.id === photo.id);
+  if (index >= 0) {
+    photos[index] = photo;
+  } else {
+    photos.push(photo);
+  }
+  localStorage.setItem(STORAGE_KEYS.galleryPhotos, JSON.stringify(photos));
+}
+
+export function deleteGalleryPhoto(id: string): void {
+  const photos = getGalleryPhotos().filter((p) => p.id !== id);
+  localStorage.setItem(STORAGE_KEYS.galleryPhotos, JSON.stringify(photos));
 }
 
 export function deleteContactSubmission(id: string): void {

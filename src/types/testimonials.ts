@@ -1,3 +1,14 @@
+export interface GalleryPhoto {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl: string;
+  category?: string;
+  order: number;
+  status: "active" | "inactive";
+  createdAt: string;
+}
+
 export interface TextTestimonial {
   id: string;
   name: string;
