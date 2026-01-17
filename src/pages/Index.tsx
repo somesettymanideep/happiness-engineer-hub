@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { HighlightCard } from "@/components/shared/HighlightCard";
 import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
 import { VideoTestimonialsCarousel } from "@/components/testimonials/VideoTestimonialsCarousel";
-import heroImage from "@/assets/hero-aviation.jpg";
+import heroImage from "@/assets/hero-home.png";
 import profilePhoto from "@/assets/profile-photo.png";
 import bookCover from "@/assets/book-cover.jpg";
 
