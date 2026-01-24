@@ -5,7 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { PageHero } from "@/components/shared/PageHero";
 import { Button } from "@/components/ui/button";
-import bookCover from "@/assets/book-cover.jpg";
+import bookCover from "@/assets/book-mockup.png";
 import heroBook from "@/assets/hero-book.jpg";
 
 const pillars = [

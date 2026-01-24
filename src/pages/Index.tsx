@@ -9,7 +9,7 @@ import { TestimonialsSection } from "@/components/testimonials/TestimonialsSecti
 import { VideoTestimonialsCarousel } from "@/components/testimonials/VideoTestimonialsCarousel";
 import heroImage from "@/assets/hero-home.png";
 import profilePhoto from "@/assets/profile-photo.png";
-import bookCover from "@/assets/book-cover.jpg";
+import bookCover from "@/assets/book-mockup.png";
 
 const highlights = [
   {
@@ -178,7 +178,7 @@ const Index = () => {
               </p>
               <Button variant="gold" size="lg" asChild>
                 <a  href="https://www.amazon.in/dp/B0GCYVW13X?ref=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&bestFormat=true">
-                  Discover the Book
+                 Get Your Copy
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
