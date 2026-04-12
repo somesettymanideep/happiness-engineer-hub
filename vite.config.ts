@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 
 export default defineConfig(({ mode }) => ({
-  base:  "/happiness-engineer-hub/",
+  base: "./",
   server: {
     host: "::",
     port: 8080,
