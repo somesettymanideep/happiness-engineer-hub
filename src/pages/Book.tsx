@@ -93,7 +93,7 @@ const Book = () => {
                 into actionable wisdom for achieving a balanced, fulfilled life.
               </p>
               <Button variant="gold" size="lg" asChild>
-                <a href=" https://amzn.in/d/6Rk5EQT" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.amazon.in/Decoding-Happiness-Journey-Aeroplane-Engineer/dp/9376310187/ref=sr_1_2?crid=2P50FLOMW41XH&dib=eyJ2IjoiMSJ9.8KBdsjKDWSmXxeycOsnRZUGazZi8VZLrlfwN0eStV5Qz6kwlQPl4ezRb6TtBWQrVhcPBEP7dtCM065k0BeDamvMHIVRw1z3E31yLZzEJR-S4rjybJuyCvPROqa0XQXvSvxrtpMDkiVd3ZOQRdKQfJ0xRvMQUx-S7IYhtkkZfuxylH-3hgSPvMTTS9NcnfITXEBiiVT--hDYKB-dvMTOF3J3iVIF7-pFXVZJBff_qZ-M.f_wFwMKg3ZYzRwUGjSBHFlO0PYMu3Hwj2HfKGlVvHwc&dib_tag=se&keywords=Decoding+Happiness&qid=1776106452&sprefix=decoding+happiness%2Caps%2C417&sr=8-2" target="_blank" rel="noopener noreferrer">
                   Get Your Copy
                   <ArrowRight className="w-5 h-5" />
                 </a>

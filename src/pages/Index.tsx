@@ -177,7 +177,7 @@ const Index = () => {
                 Wealth, Relationships, Skills, Dreams, and Spirituality.
               </p>
               <Button variant="gold" size="lg" asChild>
-                <a  href="https://www.amazon.in/dp/B0GCYVW13X?ref=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_6AK8W2WMKW6KAZKSJ36W_9&bestFormat=true">
+                <a href="https://www.amazon.in/Decoding-Happiness-Journey-Aeroplane-Engineer/dp/9376310187/ref=sr_1_2?crid=2P50FLOMW41XH&dib=eyJ2IjoiMSJ9.8KBdsjKDWSmXxeycOsnRZUGazZi8VZLrlfwN0eStV5Qz6kwlQPl4ezRb6TtBWQrVhcPBEP7dtCM065k0BeDamvMHIVRw1z3E31yLZzEJR-S4rjybJuyCvPROqa0XQXvSvxrtpMDkiVd3ZOQRdKQfJ0xRvMQUx-S7IYhtkkZfuxylH-3hgSPvMTTS9NcnfITXEBiiVT--hDYKB-dvMTOF3J3iVIF7-pFXVZJBff_qZ-M.f_wFwMKg3ZYzRwUGjSBHFlO0PYMu3Hwj2HfKGlVvHwc&dib_tag=se&keywords=Decoding+Happiness&qid=1776106452&sprefix=decoding+happiness%2Caps%2C417&sr=8-2" target="_blank" rel="noopener noreferrer">
                  Get Your Copy
                   <ArrowRight className="w-5 h-5" />
                 </a>
