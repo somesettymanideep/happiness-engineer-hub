@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Plane, GraduationCap, BookOpen, Brain, Mic, Film, ArrowRight } from "lucide-react";
+import { Plane, GraduationCap, BookOpen, Brain, Mic, Film, ArrowRight, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeader } from "@/components/shared/SectionHeader";
@@ -10,6 +10,7 @@ import { VideoTestimonialsCarousel } from "@/components/testimonials/VideoTestim
 import heroImage from "@/assets/hero-home.png";
 import profilePhoto from "@/assets/profile-photo.png";
 import bookCover from "@/assets/book-mockup.png";
+import audiobookPromo from "@/assets/audiobook-promo.jpg";
 
 const highlights = [
   {
@@ -203,43 +204,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Audiobook Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[hsl(var(--primary))] to-[hsl(220,50%,15%)]">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="inline-block px-4 py-1.5 bg-gold/20 rounded-full text-gold text-sm font-medium mb-4">
-                🎧 Now Available as Audiobook
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground mb-4">
-                Unlock <span className="text-gradient-gold">Happiness</span> Wherever You Are!
-              </h2>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
-                Now available as an <strong className="text-gold">audiobook on 30+ global platforms!</strong>
-              </p>
-              <p className="text-primary-foreground/70 leading-relaxed mb-8 max-w-2xl mx-auto">
-                The best way to finish a book while Traveling, at the Gym, or Walking – listen to Decoding Happiness anytime, anywhere!
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">🟢 Spotify</span>
-                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">📘 Audible</span>
-                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">🎙️ Google Podcasts</span>
-                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">▶️ Google Play</span>
-              </div>
-              <Button variant="gold" size="xl" asChild>
-                <a href="https://play.google.com/store/audiobooks/details?pcampaignid=books_inapp_orson_options_share&id=AQAAAECazUGNyM" target="_blank" rel="noopener noreferrer">
-                  🎧 Listen Now
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Philosophy Section */}
       <section className="py-20 lg:py-28 bg-secondary">
@@ -275,7 +239,60 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Audiobook Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-[hsl(var(--primary))] to-[hsl(220,50%,15%)]">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute -inset-8 bg-gold/10 rounded-3xl blur-2xl" />
+                <img
+                  src={audiobookPromo}
+                  alt="Decoding Happiness Audiobook - Available on 30+ platforms"
+                  className="relative w-72 md:w-80 rounded-2xl shadow-2xl border-2 border-gold/20"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-center lg:text-left"
+            >
+              <span className="inline-block px-4 py-1.5 bg-gold/20 rounded-full text-gold text-sm font-medium mb-4">
+                🎧 Now Available as Audiobook
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground mb-4">
+                Unlock <span className="text-gradient-gold">Happiness</span> Wherever You Are!
+              </h2>
+              <p className="text-primary-foreground/80 text-lg leading-relaxed mb-4">
+                Now available as an <strong className="text-gold">audiobook on 30+ global platforms!</strong>
+              </p>
+              <p className="text-primary-foreground/70 leading-relaxed mb-8">
+                The best way to finish a book while Traveling, at the Gym, or Walking – listen to Decoding Happiness anytime, anywhere!
+              </p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">🟢 Spotify</span>
+                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">📘 Audible</span>
+                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">🎙️ Google Podcasts</span>
+                <span className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm font-medium">▶️ Google Play</span>
+              </div>
+              <Button variant="gold" size="xl" asChild>
+                <a href="https://play.google.com/store/audiobooks/details?pcampaignid=books_inapp_orson_options_share&id=AQAAAECazUGNyM" target="_blank" rel="noopener noreferrer">
+                  🎧 Listen Now
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       <TestimonialsSection />
 
       {/* Video Testimonials Section */}
